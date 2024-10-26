@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.top-bar {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.top-bar .left,
+.top-bar .right {
+    display: flex;
+    align-items: center;
+}
+
+.top-bar .left {
+    margin-left: 20px;
+}
+
+.top-bar .right {
+    margin-right: 20px;
+}
+
+.top-bar i {
+    margin-right: 5px;
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.top-bar a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    position: sticky;  /* Make the header sticky */
+    top: 0;            /* Stick to the top */
+    z-index: 1000; 
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+}
+
+.header nav a {
+    color: #000033;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+.header .search {
+    margin-right: 20px;
+}
+
+.header .search i {
+    font-size: 18px;
+    color: #666;
+}
+
+.header .quote-button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.header .quote-button:hover {
+    background-color: #004494;
+}
