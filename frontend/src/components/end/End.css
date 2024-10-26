@@ -1,0 +1,142 @@
+/* End.css */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0b1e39; /* Dark background color */
+    color: #000000; /* Default text color */
+}
+
+.container123 {
+    display: flex;
+    justify-content: space-between; /* Space columns evenly */
+    padding: 50px; /* Padding around the container */
+    max-width: 1700px; /* Maximum width of the container */
+    margin: 0 auto; /* Center container */
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+    background-color: #0033cc; /* Blue background color for the main container */
+    border-radius: 10px; /* Rounded corners for the container */
+}
+
+.column12 {
+    flex: 1; /* Make each column take equal space */
+    margin: 20px; /* Margin around columns */
+    min-width: 250px; /* Minimum width for responsiveness */
+    max-width: 300px; /* Maximum width for columns */
+}
+
+.column12 img {
+    color: white;
+    width: 100%; /* Responsive image */
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+.column12 h3 {
+    font-size: 34px; /* Heading size */
+    margin-bottom: 20px; /* Margin below headings */
+    color: #ffffff; /* Change heading color to white */
+}
+
+.column12 p,
+.column12 a {
+    margin-top: 20px;
+    font-size: 16px; /* Paragraph and link text size */
+    line-height: 1.6; /* Line height for better readability */
+    color: #ffffff; /* White text for links and paragraphs */
+}
+
+.column12 a {
+    text-decoration: none; /* Remove underline from links */
+    color: #ffffff; /* Link color */
+    display: flex; /* Flex layout for links */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px; /* Space between links */
+}
+
+.column12 a:hover {
+    color: #000000; /* Change color on hover */
+}
+
+.column12 a i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.subscribe {
+    display: flex; /* Flex layout for input and button */
+    flex-direction: column; /* Stack input and button vertically */
+}
+
+.subscribe input {
+    padding: 10px; /* Padding for input */
+    margin-bottom: 10px; /* Space below input */
+    border: 1px solid #333; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #ffffff; /* White background for input */
+    color: #000000; /* Black text in input */
+    transition: border-color 0.3s; /* Transition for border color */
+}
+
+.subscribe input:focus {
+    border-color: #000000; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+.subscribe button {
+    padding: 10px; /* Padding for button */
+    border: none; /* No border for button */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #a32080; /* Button background color */
+    color: #000000; /* Black text on button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for background color */
+}
+
+.subscribe button:hover {
+    background-color: white; /* Change button color on hover */
+}
+
+.footer12 {
+    
+    text-align: center; /* Centered text in footer */
+    padding: 20px; /* Padding around footer */
+  /* Dark background for footer */
+    border-top: px solid #333; /* Top border for footer */
+}
+
+.footer12 p {
+    margin-left:500px; /* No margin for paragraph in footer */
+    font-size: 14px; /* Smaller font size for footer text */
+    color: #ffffff; /* White text in footer */
+}
+
+.social-icons {
+     margin-left:500px;
+    display: flex; /* Flex layout for social icons */
+    justify-content: center; /* Center social icons */
+    margin-top: 20px; /* Space above social icons */
+}
+
+.social-icons a {
+    color: #ffffff; /* White color for social icons */
+    margin: 0 10px; /* Space between icons */
+    font-size: 20px; /* Icon size */
+}
+
+.social-icons a:hover {
+    color: #a32080; /* Change color on hover */
+}
+
+.discover-more {
+    display: inline-block; /* Inline-block for button styling */
+    padding: 10px 20px; /* Padding for button */
+    background-color: #a32080; /* Button background color */
+    color: #000000; /* Black text on button */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Space above button */
+    transition: background-color 0.3s; /* Transition for background color */
+}
+
+.discover-more:hover {
+    background-color: #ffffff; /* Change background color on hover */
+}
