@@ -1,0 +1,99 @@
+/* Client.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Client section container */
+.clients-container {
+    max-width: 800px; /* Increase max width */
+    width: 100%; /* Allow full width up to the max */
+    margin: 50px auto; /* Center the container */
+    background-color: white; /* White background for the client section */
+    padding: 20px; /* Padding around the content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center; /* Center align text */
+}
+
+/* Title styles */
+.clients-title {
+    font-size: 24px; /* Larger font size for the title */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 10px; /* Spacing below the title */
+}
+
+/* Heading styles */
+.clients-heading {
+    font-size: 18px; /* Heading font size */
+    color: #666; /* Light gray color */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
+/* Client images styles */
+.clients-images {
+    display: flex; /* Flexbox for image alignment */
+    justify-content: center; /* Center images horizontally */
+    margin-bottom: 15px; /* Spacing below images */
+}
+
+/* Image styles */
+.clients-images img {
+    border-radius: 50%; /* Circular images */
+    margin: 0 5px; /* Spacing between images */
+}
+
+/* Client text styles */
+.clients-text {
+    font-size: 16px; /* Font size for the text */
+    color: #333; /* Dark gray color */
+    margin: 15px 0; /* Vertical spacing */
+}
+
+/* Rating styles */
+.clients-rating {
+    margin-bottom: 10px; /* Spacing below rating */
+}
+
+/* Star styles */
+.clients-rating .fa-star {
+    color: #FFD700; /* Gold color for stars */
+    font-size: 20px; /* Adjust size as needed */
+}
+
+/* Author styles */
+.clients-author {
+    font-size: 14px; /* Font size for author */
+    color: #999; /* Light gray color for author */
+    margin-bottom: 20px; /* Spacing below author */
+}
+
+/* Navigation buttons */
+.clients-nav {
+    display: flex; /* Flexbox for button alignment */
+    justify-content: center; /* Center align buttons */
+}
+
+.clients-nav button {
+    background-color: #007bff; /* Primary button color */
+    border: none; /* Remove border */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding for buttons */
+    margin: 0 5px; /* Spacing between buttons */
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+/* Button hover effect */
+.clients-nav button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.clients-nav button:focus {
+    outline: none; /* Remove focus outline */
+}

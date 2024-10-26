@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4ff;
+    margin: 0;
+    padding: 0;
+}
+
+.achievements-container {
+    text-align: center;
+    padding: 50px;
+    background: #fff;
+    border-radius: 10px;
+   
+    max-width: 100%;
+    width: 100%; /* Full width */
+    margin: auto; /* Center the container */
+}
+
+.achievements-title {
+    color:  #0033cc;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 52px; /* Increased font size for better visibility */
+    margin-bottom: 10px;
+}
+
+.achievements-heading {
+    font-size: 30px; /* Slightly reduced font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.achievements-description {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.achievements-gallery {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* Set 3 columns */
+    gap: 20px; /* Set gap between grid items */
+}
+
+.achievement-item {
+    text-align: center;
+    transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+.achievement-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.achievement-item img {
+    width: 100%;
+    height: 250px; /* Fixed height for uniformity */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.achievement-title {
+    font-size: 16px; /* Increased font size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.achievement-description {
+    font-size: 14px; /* Increased font size */
+    color: #777;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .achievements-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+@media (max-width: 480px) {
+    .achievements-gallery {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}

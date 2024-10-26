@@ -1,0 +1,621 @@
+<html></html>
+
+<head>
+    <title>
+        Job Listing
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+<!-- 
+    bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .header img {
+            height: 40px;
+        }
+
+        .header nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .header .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .search-bar input {
+            padding: 5px 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .header .search-bar button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .header .auth-buttons a {
+            margin: 0 10px;
+            padding: 5px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .header .auth-buttons .login {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .header .auth-buttons .register {
+            background-color: #ff5722;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .main-content {
+            flex: 3;
+            margin-right: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+        }
+
+        .job-card,
+        .sidebar-card,
+        .job-description-card,
+        .about-company-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .job-card:hover,
+        .sidebar-card:hover,
+        .job-description-card:hover,
+        .about-company-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .job-card h2 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .job-card .company {
+            color: #666;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .job-card .rating {
+            color: #ff9800;
+            font-size: 14px;
+        }
+
+        .job-card .details {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+
+        .job-card .details div {
+            margin-right: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .job-card .details div i {
+            margin-right: 5px;
+        }
+
+        .job-card .apply-buttons {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .job-card .apply-buttons a {
+            margin-right: 10px;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .job-card .apply-buttons .register {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .job-card .apply-buttons .login {
+            background-color: #ff5722;
+            color: white;
+        }
+
+        .job-card .posted-info {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .job-description-card {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .job-description-card h3,
+        .about-company-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .job-description-card p,
+        .about-company-card p {
+            margin: 5px 0;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .sidebar-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-card .job-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar-card .job-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .sidebar-card .job-item img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .sidebar-card .job-item .info {
+            flex: 1;
+        }
+
+        .sidebar-card .job-item .info h4 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .sidebar-card .job-item .info .location {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .sidebar-card .job-item .info .rating {
+            color: #ff9800;
+            font-size: 14px;
+        }
+
+        .sidebar-card .job-item .info .posted {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .additional-content-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .additional-content-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .additional-content-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .additional-content-card p {
+            margin: 5px 0;
+            color: #333;
+            font-size: 14px;
+        }
+        
+
+
+
+    </style>
+</head>
+
+<body>
+   
+    <div class="container">
+        <div class="main-content">
+            <div class="job-card">
+                <h2>
+                    Senior Full Stack Developer
+                </h2>
+                <div class="company">
+                    IQVIA
+                    <span class="rating">
+                        <i class="fas fa-star">
+                        </i>
+                        4.0 | 3793 Reviews
+                    </span>
+                </div>
+                <div class="details">
+                    <div>
+                        <i class="fas fa-briefcase">
+                        </i>
+                        5 - 8 years
+                    </div>
+                    <div>
+                        <i class="fas fa-money-bill-wave">
+                        </i>
+                        Not Disclosed
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker-alt">
+                        </i>
+                        Hybrid
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker-alt">
+                        </i>
+                        Kochi, Chennai, Bangalore/Bengaluru
+                    </div>
+                </div>
+                <div class="apply-buttons">
+                    <a class="register" href="#">
+                        Register to apply
+                    </a>
+                    <a class="login" href="#">
+                        Login to apply
+                    </a>
+                </div>
+                <div class="posted-info">
+                    Posted: 3 days ago | Openings: 4 | Applicants: 126
+                </div>
+            </div>
+            <div class="job-description-card">
+                <h3>
+                    Job description
+                </h3>
+                <p>
+                    <strong>
+                        Project Role:
+                    </strong>
+                    Sr Software Development Engineer
+                </p>
+                <p>
+                    <strong>
+                        Work Experience:
+                    </strong>
+                    5-7 years
+                </p>
+                <p>
+                    <strong>
+                        Work location:
+                    </strong>
+                    Bengaluru/Kochi
+                </p>
+                <p>
+                    <strong>
+                        Must Have Skills:
+                    </strong>
+                    Dot net core, React.Js/Angular, SQL
+                </p>
+                <h3>
+                    Responsibilities:
+                </h3>
+                <p>
+                    Design, develop, and maintain web applications using React.js and .NET Core.
+                </p>
+                <p>
+                    Write clean, efficient, and reusable code following coding standards and best practices.
+                </p>
+                <p>
+                    Perform unit testing and participate in code reviews to ensure high-quality deliverables.
+                </p>
+                <p>
+                    Troubleshoot and resolve software defects and issues in a timely manner.
+                </p>
+                <p>
+                    Work with version control systems, such as Git, for source code management.
+                </p>
+                <h3>
+                    Requirements:
+                </h3>
+                <p>
+                    5+ years of Full stack development experience
+                </p>
+                <p>
+                    Strong Design experience.
+                </p>
+                <p>
+                    Solid experience in developing web applications using React.js and .NET Core.
+                </p>
+                <p>
+                    Strong Working knowledge of SQL Server
+                </p>
+                <p>
+                    Experience leading a minimum team of 5 and above.
+                </p>
+                <p>
+                    Experience in implementing SOLID Principles.
+                </p>
+                <p>
+                    Familiarity with Jenkins, Octopus and Ansible.
+                </p>
+                <p>
+                    Strong understanding of micro-service architecture and experience in developing micro-services.
+                </p>
+                <p>
+                    Use or implement cutting edge technologies such as ReactJS and NodeJS to create new
+                    products/software or solve existing product/platform challenges.
+                </p>
+                <p>
+                    Perform code reviews and optimization of existing code.
+                </p>
+                <h3>
+                    Good to have skills:
+                </h3>
+                <p>
+                    Knowledge on containerization technologies like Docker and orchestration tools like Kubernetes.
+                </p>
+                <p>
+                    Familiarity with NoSQL databases.
+                </p>
+                <p>
+                    Understanding of Agile development methodologies.
+                </p>
+                <p>
+                    Knowledge of cloud platforms like Azure or AWS.
+                </p>
+                <p>
+                    Experience with Python, docker, kubernetes and ansible.
+                </p>
+                <p>
+                    Experience with ML and NLP models.
+                </p>
+                <h3>
+                    Role:
+                </h3>
+                <p>
+                    Full Stack Developer
+                </p>
+                <h3>
+                    Industry Type:
+                </h3>
+                <p>
+                    Analytics / KPO / Research
+                </p>
+                <h3>
+                    Department:
+                </h3>
+                <p>
+                    Engineering - Software & QA
+                </p>
+                <h3>
+                    Employment Type:
+                </h3>
+                <p>
+                    Full Time, Permanent
+                </p>
+                <h3>
+                    Role Category:
+                </h3>
+                <p>
+                    Software Development
+                </p>
+                <h3>
+                    Education
+                </h3>
+                <p>
+                    UG: Any Graduate
+                </p>
+                <h3>
+                    Key Skills
+                </h3>
+                <p>
+                    Skills highlighted with ‘‘ are preferred keyskills
+                </p>
+                <p>
+                    Full stack Developer, React Js, Dotnet core, C#, Javascript, Node.Js, Angular, SQL
+                </p>
+            </div>
+            <div class="about-company-card">
+                <h3>
+                    About company
+                </h3>
+                <p>
+                    IQVIA is a leading global provider of advanced analytics, technology solutions and contract research
+                    services to the life sciences industry. Formed through the Merger of IMS Health and Quintiles, IQVIA
+                    applies human data science leveraging the analytic rigor and clarity of data science to the
+                    ever-expanding scope of human science to enable companies to reimagine and develop new approaches to
+                    clinical development and commercialization, speed innovation, and accelerate improvements in
+                    healthcare outcomes. Powered by the IQVIA CORE, we deliver unique and actionable insights at the
+                    intersection of large-scale analytics, transformative technology, and extensive domain expertise as
+                    well as execution capabilities. With approximately 86,000+ employees, we conduct operations in more
+                    than 100 countries.
+                </p>
+                <p>
+                    IQVIA has also featured in FORTUNE's 2023 List of “World’s Most Admired Companies”. At IQVIA, you
+                    will have the opportunity to build your career, while helping our customers drive human health
+                    outcomes forward. We dedicate our experience, resources, and reputation so that you can drive your
+                    career and choose the path that best defines your development and success.
+                </p>
+                <h3>
+                    Company Info
+                </h3>
+                <p>
+                    Address:
+                </p>
+                <p>
+                    Omega Embassy TechSquare Marathahalli Sarjapur Outer Ring Road Kadubeesanahalli, Bengaluru
+                    (Bangalore) Urban, BANGALORE, Karnataka, India
+                </p>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-card">
+                <div class="search-bar">
+                    <input placeholder="Search other interests" type="text" />
+                    <button>
+                        <i class="fas fa-search">
+                        </i>
+                    </button>
+                </div>
+
+
+                <hr>
+                <h3>
+                    Simlar Signals
+                </h3>
+                <div class="job-item">
+                    <img alt="Company logo" height="40"
+                        src="https://storage.googleapis.com/a1aa/image/C5BibYopWEY1BtvFq2deaZzOwrJJvXQbBHbAgKM6hV5qGU0JA.jpg"
+                        width="40" />
+                    <div class="info">
+                        <h4>
+                            Senior Full Stack Developer
+                        </h4>
+                        <div class="location">
+                            Evnek, Chennai
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            4.2 | 30 reviews
+                        </div>
+                        <div class="posted">
+                            Posted 23 days ago
+                        </div>
+                    </div>
+                </div>
+                <div class="job-item">
+                    <img alt="Company logo" height="40"
+                        src="https://storage.googleapis.com/a1aa/image/C5BibYopWEY1BtvFq2deaZzOwrJJvXQbBHbAgKM6hV5qGU0JA.jpg"
+                        width="40" />
+                    <div class="info">
+                        <h4>
+                            Fullstack Developer
+                        </h4>
+                        <div class="location">
+                            Intelliest Technology, Chennai (Chennai Central RS)
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            4.2 | 30 reviews
+                        </div>
+                        <div class="posted">
+                            Posted 23 days ago
+                        </div>
+                    </div>
+                </div>
+                <div class="job-item">
+                    <img alt="Company logo" height="40"
+                        src="https://storage.googleapis.com/a1aa/image/C5BibYopWEY1BtvFq2deaZzOwrJJvXQbBHbAgKM6hV5qGU0JA.jpg"
+                        width="40" />
+                    <div class="info">
+                        <h4>
+                            Lead .Net Fullstack Developer with Angular
+                        </h4>
+                        <div class="location">
+                            TVS Next, Chennai
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            3.4 | 93 reviews
+                        </div>
+                        <div class="posted">
+                            Posted 10 days ago
+                        </div>
+                    </div>
+                </div>
+                <div class="job-item">
+                    <img alt="Company logo" height="40"
+                        src="https://storage.googleapis.com/a1aa/image/C5BibYopWEY1BtvFq2deaZzOwrJJvXQbBHbAgKM6hV5qGU0JA.jpg"
+                        width="40" />
+                    <div class="info">
+                        <h4>
+                            Fullstack Web Developer
+                        </h4>
+                        <div class="location">
+                            Botminds Inc, Chennai
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star">
+                            </i>
+                            2.7 | 11 reviews
+                        </div>
+                        <div class="posted">
+                            Posted 17 days ago
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="additional-content-card">
+                <h1 style="font-size: 20px; text-align: center;">BRANDS THATS TRUST US</h1>
+                <img style="width: 200px;height: 200px; margin-left: 40px;" src="https://img.freepik.com/premium-vector/creative-elegant-abstract-minimalistic-logo-design-vector-any-brand-company_1287271-13549.jpg" alt="">
+
+
+
+            </div>
+        </div>
+    </div>
+</div> <!-- Close the main container div -->
+
+
+</body>
+</html>

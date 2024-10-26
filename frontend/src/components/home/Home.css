@@ -1,0 +1,97 @@
+/* Home.css */
+
+.hero {
+    background-image: 
+        url('https://zidio.in/assets/images/home-2/hero-thumb.png'), /* First background image */
+        url('https://png.pngtree.com/background/20210709/original/pngtree-colorful-triangle-blue-purple-banner-background-picture-image_950564.jpg'); /* Second background image */
+    background-size: contain, cover; /* Adjust the size of the background images */
+    background-repeat: no-repeat, no-repeat; /* Prevent background images from repeating */
+    background-position: right center, center bottom; /* Position the first image on the right and the second one at the center bottom */
+    height: 100vh; /* Make the section full height */
+    display: flex; /* Use flexbox for positioning */
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    color: white; /* Change text color to white for better contrast */
+    text-align: center; /* Center text */
+    padding-right: 100px; /* Add padding on the right for spacing */
+}
+
+h1 {
+    font-size: 5em; /* Adjust header size */
+    margin: 10; /* Fix margin property */
+    text-align: left; /* Align text to the left */
+    font-family: 'Times New Roman', Times, serif; /* Font family */
+}
+
+p {
+    font-size: 1.2em; /* Adjust paragraph size */
+    text-align: left; /* Align text to the left */
+}
+
+.buttons {
+    margin-top: 20px; /* Add space above buttons */
+}
+
+.buttons a {
+    background-color: #0056b3; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    margin: 0 10px; /* Spacing between buttons */
+    border-radius: 5px; /* Round button corners */
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.buttons a:hover {
+    background-color: #a32080; /* Change button color on hover */
+    color: white; /* Keep button text color white */
+}
+
+.features1 {
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center features */
+    gap: 20px; /* Space between features */
+    padding: 40px 20px; /* Padding around the feature section */
+    background-color: #f4f4f4; /* Background color for features */
+}
+
+.feature1 {
+    background-color: white; /* Default background color for feature */
+    padding: 20px; /* Padding inside feature */
+    border-radius: 5px; /* Round corners */
+    text-align: center; /* Center text inside feature */
+    width: 300px; /* Fixed width */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.feature1:hover {
+    background-color: #0033cc; /* Change background color on hover */
+    color: white; /* Change text color to white on hover */
+}
+
+.icon {
+    font-size: 40px; /* Size for icons */
+    color: #b914e7; /* Icon color */
+    margin-bottom: 10px; /* Space below icons */
+}
+
+.feature1 h3 {
+    font-size: 24px; /* Size for feature headings */
+    margin-bottom: 10px; /* Space below headings */
+    text-align: center; /* Center text */
+}
+
+.feature1 p {
+    font-size: 16px; /* Size for feature paragraphs */
+    color: #000000; /* Color for feature paragraphs */
+    text-align: justify; /* Justify text */
+}
+
+
+
+
+
+.team-member:hover .card {
+    transform: rotateY(180deg);
+  }

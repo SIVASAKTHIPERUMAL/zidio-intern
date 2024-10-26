@@ -1,0 +1,136 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.job-section {
+    background-color:  #004494; /* Blue background for the section */
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 0; /* Fade out again */
+    }
+}
+
+.section-heading {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    animation: slideInFromLeft 2s ease-out infinite; /* Infinite looping */
+}
+
+
+.job-listings {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Gap between job cards */
+}
+
+.job-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.job-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.company-info i {
+    color: #f39c12;
+}
+
+.company-info span {
+    font-size: 14px;
+    color: #666666;
+}
+
+.job-details {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.job-details i {
+    margin-right: 5px;
+}
+
+.job-description {
+    font-size: 14px;
+    color: #666666;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.tags span {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #999999;
+}
+
+.footer i {
+    cursor: pointer;
+}
+
+.apply-button {
+    background-color:  #004494;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.apply-button:hover {
+    background-color: #0056b3;
+}
