@@ -1,0 +1,4 @@
+"scripts": {
+  "start": "node path/to/server.js",
+  "dev": "nodemon path/to/server.js"
+}
